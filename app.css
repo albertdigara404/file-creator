@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #669966;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 450px;
+    background: #fff;
+    padding: 30px 25px 40px;
+    border-radius: 7px;
+}
+
+.wrapper :where(textarea, input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.wrapper textarea{
+    height: 270px;
+    border: 1px solid #ccc;
+    resize: none;
+    padding: 8px 13px;
+}
+
+.wrapper .file-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.file-options .option{
+    width: calc(100% / 2 - 8px);
+}
+
+.option :where(input, .select-menu){
+    height: 50px;
+    border: 1px solid #bfbfbf;
+    padding: 0 15px;
+    margin-top: 6px;
+    border-radius: 5px;
+}
+
+.option .select-menu select{
+    height: 50px;
+    background: none;
+}
+
+.wrapper .save-btn{
+    margin-top: 20px;
+    padding: 16px 0;
+    cursor: pointer;
+    color: #fff;
+    background: #669966;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.wrapper textarea:valid ~ .save-btn{
+    pointer-events: auto;
+    opacity: 1;
+}
